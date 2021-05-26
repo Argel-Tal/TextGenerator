@@ -2,11 +2,11 @@ import pickle, gzip
 from COSC343WordEnc import COSC343WordEnc
 
 # set up file for write out of generated text
-with gzip.open("srn\_training.save") as f:
+with gzip.open("srn\_SPAMtraining.save") as f:
     marxClass, word_enc = pickle.load(f)
 
 # prompt set up
-primer = "fellows, my friends"
+primer = "hello friend,"
 allText = ""
 marxClass.reset()
 
@@ -28,6 +28,6 @@ for i in range(50):
     allText = allText + " " + decoded
 
 # write out of generated text 
-with open("marxOut5.txt", 'w') as g:
+with open("SpamText.txt", 'w') as g:
     g.write(allText)
     g.close()

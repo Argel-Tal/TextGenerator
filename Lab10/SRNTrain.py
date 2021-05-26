@@ -3,7 +3,7 @@ from COSC343SRNClassifier import COSC343SRNClassifier
 import pickle , gzip
 
 # input file
-with open("Marx.txt", "r") as f:
+with open("SpamEmail.txt", "r") as f:
     all_text = f.read()
 
 # hyper params
@@ -22,5 +22,5 @@ marxClass = COSC343SRNClassifier(hidden_layer_size = hiddenSize, activation = 'r
 marxClass.fit(X[:-1], X[1:])
 
 # saving model file
-with gzip.open("srn\_training.save", 'w') as f:
+with gzip.open("srn\_SPAMtraining.save", 'w') as f:
     pickle.dump((marxClass, word_enc), f)
