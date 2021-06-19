@@ -6,7 +6,7 @@ with gzip.open("srn\_SPAMtraining.save") as f:
     marxClass, word_enc = pickle.load(f)
 
 # prompt set up
-primer = "hello friend,"
+primer = "the money"
 allText = ""
 marxClass.reset()
 
@@ -28,6 +28,6 @@ for i in range(50):
     allText = allText + " " + decoded
 
 # write out of generated text 
-with open("SpamText.txt", 'w') as g:
+with open("SpamText4.txt", 'w') as g:
     g.write(allText)
     g.close()
