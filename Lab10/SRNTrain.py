@@ -28,9 +28,14 @@ X = word_enc.fit_transform(all_text)
 
 # training of model
 print(str(epochs) + " epochs")
-textClass = COSC343SRNClassifier(hidden_layer_size = hiddenSize, 
-    activation = 'relu', solver='adam', batch_size = batchN, 
-    learning_rate_init = lr, max_iter=epochs, verbose=True, 
+textClass = COSC343SRNClassifier(
+    hidden_layer_size = hiddenSize, 
+    activation = 'relu', 
+    solver='adam', 
+    batch_size = batchN, 
+    learning_rate_init = lr,
+    max_iter=epochs,
+    verbose=True, 
     beta_1=0.9, beta_2=0.999, epsilon=1e-08)
 textClass.fit(X[:-1], X[1:])
 
