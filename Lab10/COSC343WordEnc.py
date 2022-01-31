@@ -64,7 +64,8 @@ class COSC343WordEnc:
         X = np.argmax(X,axis=1)
         X = np.array(self.dictionary)[X]
         X = " ".join(X)
-        # removing punctuation chars, dunno why this was replacing "*" with "*"
+        # removing space around punctuation chars
+        X = X.replace("•", " -")
         X = X.replace(" ,", ",")
         X = X.replace(" -", "-")
         X = X.replace(" .", ".")

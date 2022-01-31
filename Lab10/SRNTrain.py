@@ -8,7 +8,7 @@ to select a text, modifiy <selection> to one of the following options:
     0 = Karl Marx
     1 = Spam email collection
 """
-selection = 1
+selection = 3
 
 # hyper params
 batchN = 100
@@ -16,10 +16,10 @@ lr = 0.001
 hiddenSize = 100
 epochs = 50
 # source text files
-textOptions = ["InputTexts/Marx.txt", "InputTexts/SpamEmail.txt"]
+textOptions = ["InputTexts/Marx.txt", "InputTexts/SpamEmail.txt", "InputTexts/honestBusiness.txt", "InputTexts/generous investors.txt"]
 
 # input file opening 
-with open(textOptions[selection], "r") as f:
+with open(textOptions[selection], "r", encoding='utf-8') as f:
     all_text = f.read()
 
 # data set up as one-hot-encoding

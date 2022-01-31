@@ -5,8 +5,8 @@ from COSC343WordEnc import COSC343WordEnc
 set file name for each run
 set desired length of text output (words)
 """
-desiredFileName = "spamFBI2"
-textLength = 100
+desiredFileName = "spamDefinitelyTheFBI - 01"
+textLength = 60
 
 
 # set up file for write out of generated text
@@ -38,6 +38,6 @@ for i in range(textLength):
 allText.replace("\\", "")
 
 # write out of generated text 
-with open("/home/cshome/j/jmaccormick/Documents/TextGenerator/OutputTexts/"+str(desiredFileName)+".txt" , 'w') as g:
+with open("OutputTexts/"+str(desiredFileName)+".txt" , 'w') as g:
     g.write(allText)
     g.close()
